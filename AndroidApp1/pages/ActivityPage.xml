@@ -1,0 +1,30 @@
+﻿<ContentPage
+        x:Class="AndroidApp1.Pages.ActivityPage"
+        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        Title="Activity">
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <!-- User info / greeting (if desired) -->
+        <Label Text="Hey User, your daily step goal is 10,000" FontSize="14" HorizontalOptions="Center" />
+
+        <!-- Circular steps representation -->
+        <GraphicsView x:Name="StepsCircle" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center">
+            <GraphicsView.Drawable>
+                <local:StepsCircleDrawable Steps="{Binding DailySteps}" Goal="{Binding DailyGoal}"/>
+            </GraphicsView.Drawable>
+        </GraphicsView>
+
+        <!-- Steps and Stats -->
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label Text="{Binding DailySteps, StringFormat='Steps: {0}'}" FontSize="24" FontAttributes="Bold"/>
+            <Label Text="{Binding Calories, StringFormat='Calories: {0}'}"/>
+            <Label Text="{Binding Distance, StringFormat='Distance: {0} km'}"/>
+        </VerticalStackLayout>
+
+        <!-- Navigation Buttons -->
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="Erfassen" Command="{Binding GoToStepInputCommand}"/>
+            <Button Text="Einstellungen" Command="{Binding GoToSettingsCommand}"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

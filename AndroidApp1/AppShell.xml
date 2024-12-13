@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="AndroidApp1.AppShell"
+       Title="Activity App" xmlns:x="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+    <!-- Define Routes -->
+    <ShellContent Title="Activity" ContentTemplate="{DataTemplate local:ActivityPage}" Route="activity"/>
+    <ShellContent Title="Schritte erfassen" ContentTemplate="{DataTemplate local:StepInputPage}" Route="stepinput"/>
+    <ShellContent Title="Einstellungen" ContentTemplate="{DataTemplate local:SettingsPage}" Route="settings"/>
+
+    <!-- If you prefer a tab-based or a flyout-based navigation, you can modify accordingly -->
+</Shell>

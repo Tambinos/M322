@@ -1,0 +1,13 @@
+﻿<ContentPage
+        x:Class="AndroidApp1.Pages.StepInputPage"
+        Title="StepInput" xmlns:x="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Schritte" FontSize="20" HorizontalOptions="Center"/>
+        <Entry Text="{Binding StepValue}" Keyboard="Numeric" HorizontalOptions="Center" WidthRequest="100"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="Bestätigen" Command="{Binding ConfirmCommand}"/>
+            <Button Text="Abbrechen" Command="{Binding CancelCommand}" BackgroundColor="LightGray" TextColor="Black"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<ContentPage
+        x:Class="AndroidApp1.Pages.SettingsPage"
+        Title="Einstellungen" xmlns:x="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <HorizontalStackLayout>
+            <Label Text="Standortgriff" VerticalOptions="Center"/>
+            <Switch IsToggled="{Binding Standortgriff}" HorizontalOptions="EndAndExpand"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label Text="Mitteilungen" VerticalOptions="Center"/>
+            <Switch IsToggled="{Binding Mitteilungen}" HorizontalOptions="EndAndExpand"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label Text="Cookies" VerticalOptions="Center"/>
+            <Switch IsToggled="{Binding Cookies}" HorizontalOptions="EndAndExpand"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Bestätigen" Command="{Binding ConfirmCommand}"/>
+        <Button Text="Abbrechen" Command="{Binding CancelCommand}" BackgroundColor="LightGray" TextColor="Black"/>
+    </VerticalStackLayout>
+</ContentPage>
